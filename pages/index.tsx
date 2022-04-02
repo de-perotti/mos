@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
-    <div><h1>Hello World</h1></div>
+    <div><a href="https://www.github.com/de-perotti/mos"><h1>Mouth of Sauron (under construction)</h1></a></div>
   )
 }
 
