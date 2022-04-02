@@ -1,5 +1,6 @@
 const withPWA = require('next-pwa');
 const { EnvironmentPlugin } = require('webpack');
+const runtimeCaching = require('next-pwa/cache');
 
 module.exports = withPWA(
     /** @type {import('next').NextConfig} */ ({
@@ -20,8 +21,13 @@ module.exports = withPWA(
             dest: 'public',
             register: true,
             scope: '/',
-            sw: 'service-worker.js',
+            sw: '/service-worker.js',
             dynamicStartUrl: false,
+            runtimeCaching,
+            buildExcludes: [
+                /middleware-build-manifest\.js$/,
+                /middleware-react-loadable-manifest\.js$/,
+            ],
         },
         reactStrictMode: true,
         compiler: {
