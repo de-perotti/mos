@@ -18,6 +18,10 @@ module.exports = withPWA(
         },
         pwa: {
             dest: 'public',
+            register: true,
+            scope: '/',
+            sw: 'service-worker.js',
+            dynamicStartUrl: false,
         },
         reactStrictMode: true,
         compiler: {
