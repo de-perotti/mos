@@ -4,14 +4,7 @@
 const withPWA = require('next-pwa');
 const { EnvironmentPlugin } = require('webpack');
 const runtimeCaching = require('next-pwa/cache');
-
-const env = require('dotenv-extended').load({
-    errorOnExtra: true,
-    errorOnMissing: true,
-    errorOnRegex: true,
-    includeProcessEnv: true,
-    overrideProcessEnv: false,
-});
+const env = require('./env');
 
 module.exports = withPWA(
     /** @type {IConfig & NextConfig} */ ({
@@ -21,13 +14,9 @@ module.exports = withPWA(
             return config;
         },
         swcMinify: true,
-        siteUrl:
-            process.env.VERCEL_ENV === 'preview'
-                ? process.env.VERCEL_URL
-                : env.NEXT_PUBLIC_HOST_NAME,
-        generateRobotsTxt: true,
         pwa: {
             dest: 'public',
+            disable: env.NODE_ENV === 'development',
             register: true,
             scope: '/',
             sw: '/service-worker.js',
@@ -46,7 +35,7 @@ module.exports = withPWA(
         },
         reactStrictMode: true,
         compiler: {
-            removeConsole: process.env.NODE_ENV === 'production',
+            removeConsole: env.NODE_ENV === 'production',
         },
     })
 );

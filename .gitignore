@@ -37,5 +37,8 @@ yarn-error.log*
 /public/service-worker.js*
 /public/workbox-*.js*
 /public/fallback-*js*
+/public/robots.txt
+/public/sitemap*.xml
+/public/rss.xml
 
 .env

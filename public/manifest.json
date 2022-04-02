@@ -47,6 +47,7 @@
   "prefer_related_applications": false,
   "related_applications": [],
   "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "start_url": "/",
   "short_name": "perotti.dev",
   "scope": "/"
