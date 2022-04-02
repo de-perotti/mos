@@ -15,7 +15,7 @@ export const postsService = {
                 meta: {
                     date: new Date('2022-04-02T22:55:15.779Z'),
                     description: 'a description',
-                    title: 'a title',
+                    title: 'b title',
                 },
             },
             {
