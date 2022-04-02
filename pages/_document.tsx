@@ -7,8 +7,6 @@ export default class MyDocument extends Document {
             <Html lang="pt-BR">
                 <Head>
                     <link rel="canonical" href={config.hostName} />
-
-                    {/* PWA - start */}
                     <meta name="application-name" content={config.domainName} />
                     <meta name="description" content={config.appDescription} />
                     <meta name="format-detection" content="telephone=no" />
@@ -46,9 +44,6 @@ export default class MyDocument extends Document {
                         rel="shortcut icon"
                         href="/images/icons/favicon.ico"
                     />
-                    {/* PWA - end */}
-
-                    {/* iPhone specific - start */}
                     <meta name="apple-mobile-web-app-capable" content="yes" />
                     <meta
                         name="apple-mobile-web-app-status-bar-style"
@@ -107,53 +102,6 @@ export default class MyDocument extends Document {
                         sizes="180x180"
                         href="/images/icons/apple-icon-180x180.png"
                     />
-                    {/*apple splash screen images*/}
-                    {/*<link rel='apple-touch-startup-image' href='/images/apple_splash_2048.png' sizes='2048x2732' />*/}
-                    {/*<link rel='apple-touch-startup-image' href='/images/apple_splash_1668.png' sizes='1668x2224' />*/}
-                    {/*<link rel='apple-touch-startup-image' href='/images/apple_splash_1536.png' sizes='1536x2048' />*/}
-                    {/*<link rel='apple-touch-startup-image' href='/images/apple_splash_1125.png' sizes='1125x2436' />*/}
-                    {/*<link rel='apple-touch-startup-image' href='/images/apple_splash_1242.png' sizes='1242x2208' />*/}
-                    {/*<link rel='apple-touch-startup-image' href='/images/apple_splash_750.png' sizes='750x1334' />*/}
-                    {/*<link rel='apple-touch-startup-image' href='/images/apple_splash_640.png' sizes='640x1136' />*/}
-                    {/* iPhone specific - end */}
-
-                    {/* Twitter - start */}
-                    <meta name="twitter:card" content="summary" />
-                    <meta name="twitter:url" content={config.hostName} />
-                    <meta name="twitter:title" content={config.domainName} />
-                    <meta
-                        name="twitter:description"
-                        content={config.appDescription}
-                    />
-                    <meta
-                        name="twitter:image"
-                        content={`${config.hostName}/images/icons/android-chrome-192x192.png`}
-                    />
-                    <meta
-                        property="twitter:image:alt"
-                        content="perotti.dev logo"
-                    />
-                    {/* Twitter - end */}
-
-                    {/* OpenGraph - start */}
-                    <meta property="og:type" content="website" />
-                    <meta property="og:title" content={config.domainName} />
-                    <meta
-                        property="og:description"
-                        content={config.appDescription}
-                    />
-                    <meta property="og:site_name" content={config.domainName} />
-                    <meta property="og:url" content={config.hostName} />
-                    <meta
-                        property="og:image"
-                        content={`${config.hostName}/images/icons/apple-touch-icon.png`}
-                    />
-                    <meta
-                        property="og:image:secure_url"
-                        content={`${config.hostName}/images/icons/apple-touch-icon.png`}
-                    />
-                    <meta property="og:image:alt" content="perotti.dev logo" />
-                    {/* OpenGraph - end */}
                 </Head>
                 <body>
                     <Main />

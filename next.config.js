@@ -17,6 +17,7 @@ module.exports = withPWA(
 
             return config;
         },
+        swcMinify: true,
         pwa: {
             dest: 'public',
             register: true,
@@ -31,10 +32,7 @@ module.exports = withPWA(
         },
         reactStrictMode: true,
         compiler: {
-            removeConsole: true,
-        },
-        experimental: {
-            swcMinify: true,
+            removeConsole: process.env.NODE_ENV === 'production',
         },
     })
 );
